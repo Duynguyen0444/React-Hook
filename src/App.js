@@ -60,6 +60,7 @@ function App() {
 
 	// -----------------Function-----------------
 
+	// onClick to delete item
 	function onTodoClick(todo) {
 		const index = todoList.findIndex((x) => x.id === todo.id);
 		if (index < 0) return;
@@ -71,6 +72,7 @@ function App() {
 		}
 	}
 
+	// Submit form
 	function handleTodoFormSubmit(formValues) {
 		// Add new todo to current todolist
 		const todo = {
@@ -85,6 +87,7 @@ function App() {
 		// setTodoList([...todoList, { id: todoList.length + 1, ...formValues }]);
 	}
 
+	// Pagination
 	function handlePageChage(newPage) {
 		setFilters({
 			...filters,
@@ -92,6 +95,7 @@ function App() {
 		});
 	}
 
+	//Filter item
 	function handleFilterChange(newFilter) {
 		setFilters({
 			...filters,
@@ -104,8 +108,8 @@ function App() {
 	return (
 		<div className="App">
 			<h1> React Todo list </h1>
-			{/* <TodoForm onSubmit={handleTodoFormSubmit} />
-			<TodoList todos={todoList} onTodoClick={onTodoClick} /> */}
+			<TodoForm onSubmit={handleTodoFormSubmit} />
+			<TodoList todos={todoList} onTodoClick={onTodoClick} />
 
 			<PostFilterForm onSubmit={handleFilterChange} />
 			<PostList posts={postsList} />

@@ -18,8 +18,7 @@ function TodoList(props) {
 		if (onTodoClick) {
 			onTodoClick(todo);
 		}
-	}
-	console.log(todos);
+	}	
 	return (
 		<ul className="todo-list">
 			{todos.map((todo) => {
