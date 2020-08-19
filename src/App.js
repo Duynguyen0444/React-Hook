@@ -8,6 +8,7 @@ import TodoForm from './Components/TodoForm/TodoForm';
 import PostList from './Components/PostList/PostList';
 import Paginantion from './Components/Pagination/Paginantion';
 import PostFilterForm from './Components/PostFilterForm/PostFilterForm';
+import Clock from './Components/Clock/Clock';
 
 function App() {
 	const [todoList, setTodoList] = useState([
@@ -36,6 +37,8 @@ function App() {
 		_limit: 10,
 		title_like: '',
 	});
+
+	const [showClock, setShowClock] = useState(true);
 
 	// -----------------useEffect-----------------
 	useEffect(() => {
@@ -114,6 +117,9 @@ function App() {
 			<PostFilterForm onSubmit={handleFilterChange} />
 			<PostList posts={postsList} />
 			<Paginantion pagination={pagination} onPageChange={handlePageChage} />
+
+			{showClock && <Clock />}
+			<button onClick={() => setShowClock(false)}> Click </button>
 		</div>
 	);
 }

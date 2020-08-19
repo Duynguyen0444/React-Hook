@@ -23,11 +23,7 @@ function Colorbox() {
 		localStorage.setItem('color_box', newColor);
 	}
 	return (
-		<div
-			className="color__box"
-			style={{ backgroundColor: color }}
-			onClick={handleChangeColor}
-		>
+		<div className="color__box" style={{ backgroundColor: color }} onClick={handleChangeColor}>
 			COLOR BOX
 		</div>
 	);

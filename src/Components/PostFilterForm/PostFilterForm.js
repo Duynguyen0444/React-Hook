@@ -23,7 +23,7 @@ function PostFilterForm(props) {
 
 		// 2. Clear item at 1st render
 		if (typingTimeoutRef.current) {
-			clearTimeout(typingTimeoutRef.current);
+			clearTimeout(typingTimeoutRef.current);			
 		}
 
 		// 3. After 300ms and stop typing => filter item
